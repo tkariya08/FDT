@@ -1,11 +1,11 @@
 
 #### code to put in github ##################
 
-require(ggplot2);require(dplyr);require(reshape2);require(purrr);require(lubridate)
+require(ggplot2);require(dplyr);require(reshape2);require(purrr);require(lubridate);require(tidyr)
 
 set.seed(7389)
 
-st_nam<-c("MLO","ASK","MID","WIS","AZR","NWR","SHM","BRW","ZEP","ALT") #Station Names
+sites<-c("MLO","ASK","MID","WIS","AZR","NWR","SHM","BRW","ZEP","ALT") #Station Names
 
 
 get_source_file <- function(station, tracegas) {
@@ -216,7 +216,7 @@ runSite <- function(site) {
 }
 
 
-
+cup_metrics<-runSite(sites[1]) ## stores output of runSite in cup_metrics 
 
 
 
